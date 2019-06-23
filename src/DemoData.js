@@ -2,39 +2,39 @@ const DemoData = {
     resources: [
         {
             id: 'r0',
-            name: 'Resource0',
+            name: 'Teste0',
             groupOnly: true,
         },
         {
             id: 'r1',
-            name: 'Resource1',
+            name: 'Teste1',
             parentId: 'r0',
         },
         {
             id: 'r2',
-            name: 'Resource2',
+            name: 'Teste2',
             parentId: 'r3',
         },
         {
             id: 'r3',
-            name: 'Resource3',
+            name: 'Teste3',
             parentId: 'r1',
         },
         {
             id: 'r4',
-            name: 'Resource4',
+            name: 'Teste4',
         },
         {
             id: 'r5',
-            name: 'Resource5',
+            name: 'Teste5',
         },
         {
             id: 'r6',
-            name: 'Resource6',
+            name: 'Teste6',
         },
         {
             id: 'r7',
-            name: 'Resource7Resource7Resource7Resource7Resource7',
+            name: 'Teste7Resource7Resource7Resource7Resource7',
         }
     ],
     events: [
