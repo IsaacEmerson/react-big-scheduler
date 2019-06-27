@@ -54,7 +54,7 @@
 .ant-radio-wrapper:hover .ant-radio,
 .ant-radio:hover .ant-radio-inner,
 .ant-radio-input:focus + .ant-radio-inner {
-  border-color: #7c18ff;
+  border-color: #6A1B9A;
 }
 .ant-radio-input:focus + .ant-radio-inner {
   -webkit-box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.08);
@@ -95,7 +95,7 @@
   display: table;
   width: 8px;
   height: 8px;
-  background-color: #7c18ff;
+  background-color: #6A1B9A;
   border-top: 0;
   border-left: 0;
   -webkit-transform: scale(0);
@@ -185,7 +185,7 @@ span.ant-radio + * {
 }
 .ant-radio-button-wrapper:hover {
   position: relative;
-  color: #7c18ff;
+  color: #6A1B9A;
 }
 .ant-radio-button-wrapper:focus-within {
   outline: none;
@@ -201,10 +201,10 @@ span.ant-radio + * {
 .ant-radio-button-wrapper-checked {
   z-index: 1;
   background-color: transparent !important;
-  color: #7c18ff !important;
+  color: #6A1B9A !important;
 }
 .ant-radio-button-wrapper-checked:hover {
-  color: #7c18ff;
+  color: #6A1B9A;
 }
 @-webkit-keyframes antRadioEffect {
   0% {

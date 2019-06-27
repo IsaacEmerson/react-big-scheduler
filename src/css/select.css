@@ -84,13 +84,13 @@
           user-select: none;
 }
 .ant-select-selection:hover {
-  border-color: #7c18ff;
+  border-color: rgba(106, 27, 154, 0.1) !important;
   border-right-width: 1px !important;
 }
 /* .ant-select-focused .ant-select-selection,
 .ant-select-selection:focus,
 .ant-select-selection:active {
-  border-color: #7c18ff;
+  border-color: #6A1B9A;
   border-right-width: 1px !important;
   outline: 0;
   -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
@@ -412,7 +412,7 @@
           transform: rotate(180deg);
 }
 .ant-select-open .ant-select-selection {
-  border-color: #7c18ff;
+  border-color: #6A1B9A;
   border-right-width: 1px !important;
 }
 .ant-select-combobox .ant-select-arrow {
@@ -527,19 +527,19 @@
   transition: background 0.3s ease;
 }
 ::-webkit-scrollbar-track {
-  background-color: #F4F4F4;
+  background-color: #fff;
 }
 ::-webkit-scrollbar {
   height: 4px;
   width: 4px;
-  background: #F4F4F4;
+  background: #fff;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 25px;
-  background: #7c18ff;
+  background: #6A1B9A;
 }
 .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
-  background-color: #e0d5ee;
+  background-color: rgba(106, 27, 154, 0.2);
 }
 .ant-select-dropdown-menu-item:first-child {
   border-radius: 4px 4px 0 0;
@@ -548,9 +548,9 @@
   border-radius: 0 0 4px 4px;
 }
 .ant-select-dropdown-menu-item-selected {
-  color: rgba(0, 0, 0, 0.65);
+  color:white;
   font-weight: 600;
-  background-color: #e0d5ee;
+  background-color: rgba(106, 27, 154, 1) !important;
 }
 .ant-select-dropdown-menu-item-disabled {
   color: rgba(0, 0, 0, 0.25);
@@ -561,7 +561,7 @@
   cursor: not-allowed;
 }
 .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
-  background-color: #e6f7ff;
+  background-color: rgba(106, 27, 154, 1);
 }
 .ant-select-dropdown-menu-item-divider {
   height: 1px;
@@ -596,7 +596,7 @@
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected .ant-select-selected-icon,
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:hover .ant-select-selected-icon {
   display: inline-block;
-  color: #7c18ff;
+  color: #6A1B9A;
 }
 .ant-select-dropdown--empty.ant-select-dropdown--multiple .ant-select-dropdown-menu-item {
   padding-right: 12px;

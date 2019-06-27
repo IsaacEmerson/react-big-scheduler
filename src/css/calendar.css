@@ -1,7 +1,3 @@
-/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
-/* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable */
-/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 .ant-fullcalendar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -14,7 +10,6 @@
   list-style: none;
   -webkit-font-feature-settings: 'tnum';
           font-feature-settings: 'tnum';
-  border-top: 1px solid #d9d9d9;
   outline: none;
 }
 .ant-select.ant-fullcalendar-year-select {
@@ -105,25 +100,24 @@
   transition: all 0.3s;
 }
 .ant-fullcalendar-value:hover {
-  background: #e7dff1;
+  background: rgba(106, 27, 154, 0.1);
   cursor: pointer;
 }
 .ant-fullcalendar-value:active {
   color: #fff;
-  background: #7c18ff;
+  background: rgba(106, 27, 154, 0.3);
 }
 .ant-fullcalendar-month-panel-cell .ant-fullcalendar-value {
   width: 48px;
 }
-/* .ant-fullcalendar-today .ant-fullcalendar-value,
+.ant-fullcalendar-today .ant-fullcalendar-value,
 .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value {
-  -webkit-box-shadow: 0 0 0 1px #1890ff inset;
-          box-shadow: 0 0 0 1px #1890ff inset;
-} */
+  background-color: #6A1B9A !important;
+  color: white;
+}
 .ant-fullcalendar-selected-day .ant-fullcalendar-value,
 .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value {
-  color: #fff;
-  background: #7c18ff;
+  background: rgba(106, 27, 154, 0.1);
 }
 .ant-fullcalendar-disabled-cell-first-of-row .ant-fullcalendar-value {
   border-top-left-radius: 4px;
@@ -198,7 +192,7 @@
 .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-month,
 .ant-fullcalendar-fullscreen .ant-fullcalendar-today .ant-fullcalendar-date {
   background: transparent;
-  border-top-color: #1890ff;
+  border-top-color: #6A1B9A;
 }
 .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value,
 .ant-fullcalendar-fullscreen .ant-fullcalendar-today .ant-fullcalendar-value {
@@ -211,7 +205,7 @@
 }
 .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value,
 .ant-fullcalendar-fullscreen .ant-fullcalendar-selected-day .ant-fullcalendar-value {
-  color: #1890ff;
+  color: #6A1B9A;
 }
 .ant-fullcalendar-fullscreen .ant-fullcalendar-last-month-cell .ant-fullcalendar-date,
 .ant-fullcalendar-fullscreen .ant-fullcalendar-next-month-btn-day .ant-fullcalendar-date {
