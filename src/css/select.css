@@ -1,7 +1,16 @@
-/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
-/* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable */
-/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.ant-select-dropdown ::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.ant-select-dropdown ::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: #fff;
+}
+.ant-select-dropdown ::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: #6A1B9A;
+}
+
 .ant-select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -525,18 +534,6 @@
   
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
-}
-::-webkit-scrollbar-track {
-  background-color: #fff;
-}
-::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-  background: #fff;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 25px;
-  background: #6A1B9A;
 }
 .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
   background-color: rgba(106, 27, 154, 0.2);

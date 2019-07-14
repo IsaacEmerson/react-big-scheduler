@@ -1,3 +1,16 @@
+.scheduler ::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.scheduler ::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+    background: #fff;
+}
+.scheduler ::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background: #6A1B9A;
+}
+
 .header1-text{
     font-size: 25px;
     color: #90CDF9;
