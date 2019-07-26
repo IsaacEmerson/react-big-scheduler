@@ -21,7 +21,9 @@ class HeaderView extends Component {
         let minuteStepsInHour = schedulerData.getMinuteStepsInHour();
 
         let headerList = [];
-        let style = {};
+        let style = {
+            fontWeight: '900',
+        };
         if(cellUnit === CellUnits.Hour){
             headers.forEach((item, index) => {
                 if(index % minuteStepsInHour === 0){
@@ -86,7 +88,7 @@ class HeaderView extends Component {
 
         return (
             <thead>
-                <tr style={{height: headerHeight}}>
+                <tr style={{height: '220px'}}>
                     {headerList}
                 </tr>
             </thead>

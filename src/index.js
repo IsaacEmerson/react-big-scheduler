@@ -51,6 +51,7 @@ import SchedulerData from './SchedulerData'
 import DemoData from './DemoData'
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
+import './css/style.css';
 
 class Scheduler extends Component {
 
@@ -169,7 +170,7 @@ class Scheduler extends Component {
         let radioButtonList = config.views.map(item => {
             return <RadioButton key={`${item.viewType}${item.showAgenda ? 1 : 0}${item.isEventPerspective ? 1 : 0}`}
                                 value={`${item.viewType}${item.showAgenda ? 1 : 0}${item.isEventPerspective ? 1 : 0}`}><span
-                style={{margin: "0px 8px"}}>{item.viewName}</span></RadioButton>
+                style={{margin: "0px 0px"}} className='options-header'>{item.viewName}</span></RadioButton>
         })
 
         let tbodyContent = <tr />;
@@ -220,7 +221,7 @@ class Scheduler extends Component {
                 <tr>
                     <td style={{width: resourceTableWidth, verticalAlign: 'top'}}>
                         <div className="resource-view">
-                            <div style={{overflow: "hidden", borderBottom: "1px solid #e9e9e9", height: config.tableHeaderHeight}}>
+                            <div style={{overflow: "hidden", borderBottom: "1px solid #e9e9e9", height: config.tableHeaderHeight, marginTop: '90px'}}>
                                 <div style={{overflowX: "scroll", overflowY: "hidden", margin: `0px 0px -${contentScrollbarHeight}px`}}>
                                     <table className="resource-table">
                                         <thead>
@@ -234,16 +235,18 @@ class Scheduler extends Component {
                                 </div>
                             </div>
                             <div style={resourceContentStyle} ref={this.schedulerResourceRef} onMouseOver={this.onSchedulerResourceMouseOver} onMouseOut={this.onSchedulerResourceMouseOut} onScroll={this.onSchedulerResourceScroll}>
+                                <div>
                                 <ResourceView
                                     {...this.props}
                                     contentScrollbarHeight={resourcePaddingBottom}
                                 />
+                                </div>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div className="scheduler-view" style={{width: schedulerContainerWidth, verticalAlign: 'top'}}>
-                            <div style={{overflow: "hidden", borderBottom: "1px solid #e9e9e9", height: config.tableHeaderHeight}}>
+                            <div style={{overflow: "hidden", borderBottom: "1px solid #e9e9e9", height: '130px', marginBottom: '0px'}}>
                                 <div style={{overflowX: "scroll", overflowY: "hidden", margin: `0px 0px -${contentScrollbarHeight}px`}} ref={this.schedulerHeadRef} onMouseOver={this.onSchedulerHeadMouseOver} onMouseOut={this.onSchedulerHeadMouseOut} onScroll={this.onSchedulerHeadScroll}>
                                     <div style={{paddingRight: `${contentScrollbarWidth}px`, width: schedulerWidth + contentScrollbarWidth}}>
                                         <table className="scheduler-bg-table">
@@ -255,14 +258,14 @@ class Scheduler extends Component {
                             <div style={schedulerContentStyle} ref={this.schedulerContentRef} onMouseOver={this.onSchedulerContentMouseOver} onMouseOut={this.onSchedulerContentMouseOut} onScroll={this.onSchedulerContentScroll} >
                                 <div style={{width: schedulerWidth, height: contentHeight}}>
                                     <div className="scheduler-content">
-                                        <table className="scheduler-content-table" >
+                                        <table className="scheduler-content-table">
                                             <tbody>
                                                 {resourceEventsList}
                                             </tbody>
                                         </table>
                                     </div>
                                     <div className="scheduler-bg">
-                                        <table className="scheduler-bg-table" style={{width: schedulerWidth}} ref={this.schedulerContentBgTableRef} >
+                                        <table className="scheduler-bg-table" style={{width: schedulerWidth}} ref={this.schedulerContentBgTableRef}>
                                             <BodyView {...this.props}/>
                                         </table>
                                     </div>
@@ -278,33 +281,37 @@ class Scheduler extends Component {
         let schedulerHeader = <div />;
         if(config.headerEnabled) {
             schedulerHeader = (
-                <Row type="flex" align="middle" justify="space-between" style={{marginBottom: '24px'}}>
-                    {leftCustomHeader}
-                    <Col>
-                        <div className='header2-text'>
-                            <Icon type="left" style={{marginRight: "8px"}} className="icon-nav"
-                                    onClick={this.goBack}/>
-                            {
-                            calendarPopoverEnabled
-                                ?
-                                <Popover content={popover} placement="bottom" trigger="click"
-                                        visible={this.state.visible}
-                                        onVisibleChange={this.handleVisibleChange}>
-                                <span className={'header2-text-label'} style={{cursor: 'pointer'}}>{dateLabel}</span>
-                                </Popover>
-                                : <span className={'header2-text-label'}>{dateLabel}</span>
-                            }
-                            <Icon type="right" style={{marginLeft: "8px"}} className="icon-nav"
-                                    onClick={this.goNext}/>
-                        </div>
-                    </Col>
-                    <Col>
-                        <RadioGroup defaultValue={defaultValue} size="default" onChange={this.onViewChange}>
-                            {radioButtonList}
-                        </RadioGroup>
-                    </Col>
-                    {rightCustomHeader}
-                </Row>
+                <div className='content-center'>
+                <div className="paper-header">
+                    <Row type="flex" align="middle" justify="space-between">
+                        {leftCustomHeader}
+                        <Col>
+                            <div className='header2-text'>
+                                <Icon type="left" style={{marginRight: "8px"}} className="icon-nav"
+                                        onClick={this.goBack}/>
+                                {
+                                calendarPopoverEnabled
+                                    ?
+                                    <Popover content={popover} placement="bottom" trigger="click"
+                                            visible={this.state.visible}
+                                            onVisibleChange={this.handleVisibleChange}>
+                                    <span className={'header2-text-label'} style={{cursor: 'pointer', fontWeight: '700'}}>{dateLabel}</span>
+                                    </Popover>
+                                    : <span className={'header2-text-label'}>{dateLabel}</span>
+                                }
+                                <Icon type="right" style={{marginLeft: "8px"}} className="icon-nav"
+                                        onClick={this.goNext}/>
+                            </div>
+                        </Col>
+                        <Col>
+                            <RadioGroup defaultValue={defaultValue} size="default" onChange={this.onViewChange}>
+                                {radioButtonList}
+                            </RadioGroup>
+                        </Col>
+                        {rightCustomHeader}
+                    </Row>
+                </div>
+                </div>
             );
         }
 
@@ -313,12 +320,16 @@ class Scheduler extends Component {
                 <thead>
                 <tr>
                     <td colSpan="2">
-                        {schedulerHeader}
+                        <div style={{position: 'relative', zIndex: '1000'}}>
+                            {schedulerHeader}
+                        </div>
                     </td>
                 </tr>
                 </thead>
                 <tbody>
-                {tbodyContent}
+                    <div style={{marginTop: '-56px'}} className="paper-content">
+                        {tbodyContent}
+                    </div>
                 </tbody>
             </table>
         )
