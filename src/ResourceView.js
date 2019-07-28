@@ -32,13 +32,13 @@ class ResourceView extends Component {
             let indent = <span key={`es${item.indent}`} className="expander-space"></span>;
             if(item.hasChildren) {
                 indent = item.expanded ? (
-                    <Icon type="minus-square" key={`es${item.indent}`} style={{}} className=""
+                    <Icon type="up" key={`es${item.indent}`} style={{}} className=""
                         onClick={() => {
                             if(!!toggleExpandFunc)
                                 toggleExpandFunc(schedulerData, item.slotId);
                         }}/>
                 ) : (
-                    <Icon type="plus-square" key={`es${item.indent}`} style={{}} className=""
+                    <Icon type="down" key={`es${item.indent}`} style={{}} className=""
                         onClick={() => {
                             if(!!toggleExpandFunc)
                                 toggleExpandFunc(schedulerData, item.slotId);
