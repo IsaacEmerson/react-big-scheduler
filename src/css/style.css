@@ -21,7 +21,12 @@
 }
 
 .options-header{
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.options-header-active{
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
 .options-header:hover{

@@ -39,8 +39,8 @@ export default {
     defaultEventBgColor: '#80C5F6',
     selectedAreaColor: '#7EC2F3',
     nonWorkingTimeHeadColor: '#999999',
-    nonWorkingTimeHeadBgColor: '#fff0f6',
-    nonWorkingTimeBodyBgColor: '#fff0f6',
+    nonWorkingTimeHeadBgColor: 'rgba(106, 27, 154, 0.1)',
+    nonWorkingTimeBodyBgColor: 'rgba(106, 27, 154, 0.1)',
     summaryColor: '#666',
     summaryPos: SummaryPos.TopRight,
     groupOnlySlotColor: '#F8F8F8',
@@ -60,7 +60,7 @@ export default {
     relativeMove: true,
     defaultExpanded: true,
 
-    resourceName: 'Resource Name',
+    resourceName: 'Tipologia',
     taskName: 'Task Name',
     agendaViewHeader: 'Agenda',
     addMorePopoverHeaderFormat: 'MMM D, YYYY dddd',
@@ -71,10 +71,8 @@ export default {
     minuteStep: 30,
 
     views: [
-        {viewName: 'Day', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false},
-        {viewName: 'Week', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false},
-        {viewName: 'Month', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
-        {viewName: 'Quarter', viewType: ViewTypes.Quarter, showAgenda: false, isEventPerspective: false},
-        {viewName: 'Year', viewType: ViewTypes.Year, showAgenda: false, isEventPerspective: false},
+        {viewName: 'Dia', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false},
+        {viewName: 'Semana', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false},
+        {viewName: 'Mês', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
     ],
 }

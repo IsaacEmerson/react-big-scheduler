@@ -172,7 +172,6 @@ class Scheduler extends Component {
                                 value={`${item.viewType}${item.showAgenda ? 1 : 0}${item.isEventPerspective ? 1 : 0}`}><span
                 style={{margin: "0px 0px"}} className='options-header'>{item.viewName}</span></RadioButton>
         })
-
         let tbodyContent = <tr />;
         if (showAgenda) {
             tbodyContent = <AgendaView
