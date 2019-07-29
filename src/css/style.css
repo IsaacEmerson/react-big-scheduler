@@ -21,17 +21,12 @@
 }
 
 .options-header{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.options-header-active{
-    color: #FFFFFF;
-    font-weight: 700;
-}
-
-.options-header:hover{
-    color: #FFFFFF;
-    font-weight: 700;
+.options-header:hover, .options-header-active{
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
 }
 
 .scheduler ::-webkit-scrollbar-track {

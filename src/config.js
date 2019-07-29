@@ -71,8 +71,8 @@ export default {
     minuteStep: 30,
 
     views: [
-        {viewName: 'Dia', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false},
-        {viewName: 'Semana', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false},
-        {viewName: 'Mês', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
+        {viewName: 'Dia', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false, selected: false},
+        {viewName: 'Semana', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false, selected: true},
+        {viewName: 'Mês', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false, selected: false},
     ],
 }
