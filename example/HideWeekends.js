@@ -16,7 +16,7 @@ class HideWeekends extends Component{
             displayWeekend: false,
             weekCellWidth: '16%'
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

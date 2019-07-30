@@ -15,7 +15,7 @@ class Basic extends Component{
 
         //let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
         let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week);
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {
@@ -29,7 +29,6 @@ class Basic extends Component{
             <div>
                 <Nav />
                 <div>
-                    <h3 style={{textAlign: 'center'}}>Basic example<ViewSrcCode srcCodeUrl="https://github.com/StephenChou1017/react-big-scheduler/blob/master/example/Basic.js" /></h3>
                     <Scheduler schedulerData={viewModel}
                                prevClick={this.prevClick}
                                nextClick={this.nextClick}
@@ -37,8 +36,8 @@ class Basic extends Component{
                                onViewChange={this.onViewChange}
                                eventItemClick={this.eventClicked}
                                viewEventClick={this.ops1}
-                               viewEventText="Ops 1"
-                               viewEvent2Text="Ops 2"
+                               viewEventText="Button 1"
+                               viewEvent2Text="Button 2"
                                viewEvent2Click={this.ops2}
                                updateEventStart={this.updateEventStart}
                                updateEventEnd={this.updateEventEnd}

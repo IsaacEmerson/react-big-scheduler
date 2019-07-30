@@ -11,13 +11,13 @@ class CustomEventStyle extends Component{
 
         let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week, false, false, {
             views: [
-                {viewName: 'Day(Agenda)', viewType: ViewTypes.Day, showAgenda: true, isEventPerspective: false},
-                {viewName: 'Week', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false},
-                {viewName: 'Month(TaskView)', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: true},
-                {viewName: 'Year', viewType: ViewTypes.Year, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Dia(Agenda)', viewType: ViewTypes.Day, showAgenda: true, isEventPerspective: false},
+                {viewName: 'Semana', viewType: ViewTypes.Week, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Mês(Vizualizar tarefas)', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: true},
+                {viewName: 'Ano', viewType: ViewTypes.Year, showAgenda: false, isEventPerspective: false},
             ]
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.eventsForCustomEventStyle);
         this.state = {

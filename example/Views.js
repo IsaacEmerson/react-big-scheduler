@@ -17,7 +17,7 @@ class Basic extends Component{
                 {viewName: 'Task View', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: true},
             ]
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.eventsForTaskView);
         this.state = {

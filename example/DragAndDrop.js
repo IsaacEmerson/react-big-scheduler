@@ -21,12 +21,12 @@ class DragAndDrop extends Component{
             schedulerWidth: '80%',
             schedulerMaxHeight: 500,
             views: [
-                {viewName: 'Agenda View', viewType: ViewTypes.Month, showAgenda: true, isEventPerspective: false},
-                {viewName: 'Resource View', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
-                {viewName: 'Task View', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: true},
+                {viewName: 'Vizualizar Agenda', viewType: ViewTypes.Month, showAgenda: true, isEventPerspective: false},
+                {viewName: 'Vizualizar Recurso', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Vizualizar Tarefas', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: true},
             ]
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.eventsForTaskView);
         this.state = {

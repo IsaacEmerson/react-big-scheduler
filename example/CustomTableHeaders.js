@@ -12,7 +12,7 @@ class CustomHeaders extends Component {
     let schedulerData = new SchedulerData(Date.now(), ViewTypes.Week, false, false, {
       calendarPopoverEnabled: false,
     });
-    schedulerData.localeMoment.locale('en');
+    schedulerData.localeMoment.locale('pt-br');
     schedulerData.setResources(DemoData.resources);
     schedulerData.setEvents(DemoData.events);
     this.state = {

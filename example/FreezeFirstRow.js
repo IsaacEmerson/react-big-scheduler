@@ -12,7 +12,7 @@ class FreezeFirstRow extends Component{
         let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Month, false, false, {
             schedulerMaxHeight: 400,
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

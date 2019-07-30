@@ -95,7 +95,7 @@ export const isNonWorkingTime = (schedulerData, time) => {
     const { localeMoment } = schedulerData;
     if(schedulerData.cellUnit === CellUnits.Hour){
         let hour = localeMoment(time).hour();
-        if(hour < 9 || hour > 18)
+        if(hour < 6 || hour > 22)
             return true;
     }
     else {

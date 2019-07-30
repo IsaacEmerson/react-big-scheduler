@@ -61,12 +61,12 @@ export default {
     defaultExpanded: true,
 
     resourceName: 'Tipologia',
-    taskName: 'Task Name',
+    taskName: 'Nome da Tarefa',
     agendaViewHeader: 'Agenda',
     addMorePopoverHeaderFormat: 'MMM D, YYYY dddd',
     eventItemPopoverDateFormat: 'MMM D',
-    nonAgendaDayCellHeaderFormat: 'ha',
-    nonAgendaOtherCellHeaderFormat: 'ddd M/D',
+    nonAgendaDayCellHeaderFormat: 'HH:mm',
+    nonAgendaOtherCellHeaderFormat: 'ddd D/M',
 
     minuteStep: 30,
 

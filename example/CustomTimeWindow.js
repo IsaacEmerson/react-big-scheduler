@@ -14,15 +14,15 @@ class CustomTimeWindow extends Component{
             customCellWidth: 30,
             nonAgendaDayCellHeaderFormat: 'M/D|HH:mm',
             views: [
-                {viewName: 'Two days', viewType: ViewTypes.Custom, showAgenda: false, isEventPerspective: false},
-                {viewName: 'Two weeks', viewType: ViewTypes.Custom1, showAgenda: false, isEventPerspective: false},
-                {viewName: 'Two months', viewType: ViewTypes.Custom2, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Dois dias', viewType: ViewTypes.Custom, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Duas semanas', viewType: ViewTypes.Custom1, showAgenda: false, isEventPerspective: false},
+                {viewName: 'Dois meses', viewType: ViewTypes.Custom2, showAgenda: false, isEventPerspective: false},
             ],
         }, {
             getCustomDateFunc: this.getCustomDate,
             isNonWorkingTimeFunc: this.isNonWorkingTime
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

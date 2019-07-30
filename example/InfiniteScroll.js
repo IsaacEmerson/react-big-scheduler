@@ -13,11 +13,11 @@ class InfiniteScroll extends Component{
 
         let schedulerData = new SchedulerData(new moment().format(DATE_FORMAT), ViewTypes.Day, false, false, {
           views: [
-            {viewName: 'Day', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false},
-            {viewName: 'Month', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
+            {viewName: 'Dia', viewType: ViewTypes.Day, showAgenda: false, isEventPerspective: false},
+            {viewName: 'Mês', viewType: ViewTypes.Month, showAgenda: false, isEventPerspective: false},
           ]
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

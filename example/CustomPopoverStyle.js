@@ -16,7 +16,7 @@ class CustomPopoverStyle extends Component{
 
         //let schedulerData = new SchedulerData(new moment("2017-12-18").format(DATE_FORMAT), ViewTypes.Week);
         let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week);
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

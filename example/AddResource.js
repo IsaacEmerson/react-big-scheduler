@@ -15,7 +15,7 @@ class AddResource extends Component{
         super(props);
         let today = moment().format(DATE_FORMAT);
         let schedulerData = new SchedulerData(today, ViewTypes.Week);
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

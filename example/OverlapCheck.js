@@ -12,7 +12,7 @@ class OverlapCheck extends Component{
         let schedulerData = new SchedulerData('2017-12-18', ViewTypes.Week, false, false, {
             checkConflict: true,
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {

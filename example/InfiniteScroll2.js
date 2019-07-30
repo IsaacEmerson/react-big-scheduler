@@ -22,7 +22,7 @@ class InfiniteScroll2 extends Component{
             getCustomDateFunc: this.getCustomDate,
             isNonWorkingTimeFunc: this.isNonWorkingTime
         });
-        schedulerData.localeMoment.locale('en');
+        schedulerData.localeMoment.locale('pt-br');
         schedulerData.setResources(DemoData.resources);
         schedulerData.setEvents(DemoData.events);
         this.state = {
