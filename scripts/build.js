@@ -36,7 +36,7 @@ async function build() {
   try {
     // clean
     process.stdout.write('Cleaning... \n');
-    const cleanResult = await exec('npm run clean');
+    const cleanResult = await exec('yarn run clean');
 
     // transpiling and copy js
     process.stdout.write('Transpiling js with babel... \n');

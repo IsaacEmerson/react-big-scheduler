@@ -41,6 +41,7 @@
     "lint"
   ],
   "dependencies": {
+    "@material-ui/core": "^4.3.0",
     "antd": "^3.16.6",
     "cpy": "^3.4.1",
     "moment": "^2.24.0",

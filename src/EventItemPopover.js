@@ -3,6 +3,8 @@ import {PropTypes} from 'prop-types'
 import Col from 'antd/lib/col'
 import Row from 'antd/lib/row'
 import './css/grid.css'
+import Button from '@material-ui/core/Button'
+
 
 class EventItemPopover extends Component {
     constructor(props) {
@@ -53,18 +55,25 @@ class EventItemPopover extends Component {
             if(viewEventText !== undefined && viewEventClick !== undefined && (eventItem.clickable1 == undefined || eventItem.clickable1)){
                 let col = (
                     <Col span={22}>
-                        <span className="header2-text" style={{color: '#108EE9', cursor: 'pointer'}} onClick={() => {viewEventClick(schedulerData, eventItem);}}>{viewEventText}</span>
+                        <Button className="btn-purple" type="primary" style={{cursor: 'pointer'}} onClick={() => {viewEventClick(schedulerData, eventItem);}}>{viewEventText}</Button>
                     </Col>
                 );
                 if(viewEvent2Text !== undefined && viewEvent2Click !== undefined && (eventItem.clickable2 == undefined || eventItem.clickable2)) {
                     col = (
-                        <Col span={22}>
-                            <span className="header2-text" style={{color: '#108EE9', cursor: 'pointer'}} onClick={() => {viewEventClick(schedulerData, eventItem);}}>{viewEventText}</span><span className="header2-text" style={{color: '#108EE9', cursor: 'pointer', marginLeft: '16px'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>{viewEvent2Text}</span>
+                        <Col span={11}>
+                            <Button className="btn-purple" variant="contained" color="primary" style={{cursor: 'pointer'}} onClick={() => {viewEventClick(schedulerData, eventItem);}}>
+                                Editar
+                                {/* {viewEventText} */}
+                            </Button>
+                            <Button style={{cursor: 'pointer', marginLeft: '8px'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>
+                                Cancelar
+                            </Button>
+                            {/* <span className="header2-text" style={{color: '#108EE9', cursor: 'pointer', marginLeft: '16px'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>{viewEvent2Text}</span> */}
                         </Col>
                     )
                 };
                 opsRow = (
-                    <Row type="flex" align="middle">
+                    <Row type="flex" justify="end" align="middle">
                         <Col span={2}>
                             <div />
                         </Col>
@@ -75,11 +84,13 @@ class EventItemPopover extends Component {
             else if(viewEvent2Text !== undefined && viewEvent2Click !== undefined && (eventItem.clickable2 == undefined || eventItem.clickable2)) {
                 let col = (
                     <Col span={22}>
-                        <span className="header2-text" style={{color: '#108EE9', cursor: 'pointer'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>{viewEvent2Text}</span>
+                        <Button style={{cursor: 'pointer', marginLeft: '16px'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>
+                            Cancelar
+                        </Button>
                     </Col>
                 );
                 opsRow = (
-                    <Row type="flex" align="middle">
+                    <Row type="flex" justify="end" align="middle">
                         <Col span={2}>
                             <div />
                         </Col>
@@ -90,17 +101,34 @@ class EventItemPopover extends Component {
 
             let dateFormat = config.eventItemPopoverDateFormat;
             return (
-                <div style={{width: '300px'}}>
+                <div style={{width: '420px'}}>
                     <Row type="flex" align="middle">
                         <Col span={2}>
                             <div className="status-dot" style={{backgroundColor: statusColor}} />
                         </Col>
                         <Col span={22} className="overflow-text">
-                            <span className="header2-text" title={title}>{title}</span>
+                            <span className="header2-text" title={title}>Prioridade Baixa</span>
                         </Col>
                     </Row>
                     {subtitleRow}
-                    <Row type="flex" align="middle">
+                    <Row type="flex" align="middle" style={{paddingTop: '12px'}}>
+                        <Col span={2}>
+                            <div />
+                        </Col>
+                        <Col span={22}>
+                        <Row type="flex" justify="start">
+                            <Col span={14}>
+                                <Row><span className="sub-title">Supervisor</span></Row>
+                                <Row><span className="main-title">Paulo Janai </span></Row>
+                            </Col>
+                            <Col span={6}>
+                                <Row><span className="sub-title" >Checklist</span></Row>
+                                <Row><span className="main-title">Manutenção</span></Row>
+                            </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    <Row type="flex" align="middle" style={{paddingTop: '12px'}}>
                         <Col span={2}>
                             <div />
                         </Col>
@@ -108,7 +136,9 @@ class EventItemPopover extends Component {
                             <span className="header1-text">{start.format('HH:mm')}</span><span className="help-text" style={{marginLeft: '8px'}}>{start.format(dateFormat)}</span><span className="header2-text"  style={{marginLeft: '8px'}}>-</span><span className="header1-text" style={{marginLeft: '8px'}}>{end.format('HH:mm')}</span><span className="help-text" style={{marginLeft: '8px'}}>{end.format(dateFormat)}</span>
                         </Col>
                     </Row>
-                    {opsRow}
+                    <div style={{paddingTop: '18px'}}>
+                        {opsRow}
+                    </div>
                 </div>
             );
         }

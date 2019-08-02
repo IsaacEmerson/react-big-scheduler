@@ -64,7 +64,7 @@ export default {
     taskName: 'Nome da Tarefa',
     agendaViewHeader: 'Agenda',
     addMorePopoverHeaderFormat: 'MMM D, YYYY dddd',
-    eventItemPopoverDateFormat: 'MMM D',
+    eventItemPopoverDateFormat: 'D MMM YYYY',
     nonAgendaDayCellHeaderFormat: 'HH:mm',
     nonAgendaOtherCellHeaderFormat: 'ddd D/M',
 
