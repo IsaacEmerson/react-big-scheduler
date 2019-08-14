@@ -170,8 +170,7 @@ class Scheduler extends Component {
         let radioButtonList = config.views.map(item => {
             return <RadioButton key={`${item.viewType}${item.showAgenda ? 1 : 0}${item.isEventPerspective ? 1 : 0}`}
                                 value={`${item.viewType}${item.showAgenda ? 1 : 0}${item.isEventPerspective ? 1 : 0}`} 
-                                selected={item.selected}
-                                className={item.selected ? 'options-header-active' : 'options-header'}>
+                                className={item.viewType === viewType ? 'options-header-active' : 'options-header'}>
                         <span style={{margin: "0px 4px"}}>{item.viewName}</span>
                     </RadioButton>
         })
@@ -468,9 +467,7 @@ class Scheduler extends Component {
         let viewType = parseInt(e.target.value.charAt(0));
         let showAgenda = e.target.value.charAt(1) === '1';
         let isEventPerspective = e.target.value.charAt(2) === '1';
-        let selected = e.target.selected;
-        console.log(selected);
-        onViewChange(schedulerData, {viewType: viewType, showAgenda: showAgenda, isEventPerspective: isEventPerspective, selected: selected});
+        onViewChange(schedulerData, {viewType: viewType, showAgenda: showAgenda, isEventPerspective: isEventPerspective,});
     }
 
     goNext = () => {
