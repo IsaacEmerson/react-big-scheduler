@@ -8,6 +8,7 @@ import Nav from './Nav'
 import Tips from './Tips'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'
+import PopoverCreatePlanning from '../src/PopoverCreatePlanning/index'
 
 class Basic extends Component{
     constructor(props){
@@ -28,6 +29,7 @@ class Basic extends Component{
         return (
             <div>
                 <Nav />
+                <PopoverCreatePlanning />
                 <div>
                     <Scheduler schedulerData={viewModel}
                                prevClick={this.prevClick}

@@ -1,0 +1,10 @@
+.colors-group {
+  display: flex;
+}
+
+.color-box {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50px;
+}
